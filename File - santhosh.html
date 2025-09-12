@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>santhosh Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: orange;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h2 {
+      color: orange;
+      margin-bottom: 20px;
+    }
+
+    /* Profile picture */
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid orange;
+      margin-bottom: 20px;
+    }
+
+    .skills, .education, .contact {
+      max-width: 800px;
+      margin: auto;
+      text-align: left;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    ul li {
+      background: #ffe5cc;
+      margin: 8px 0;
+      padding: 10px;
+      border-left: 5px solid orange;
+    }
+
+    footer {
+      background-color: orange;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 30px;
+    }
+
+    /* Contact form */
+    form {
+      max-width: 500px;
+      margin: auto;
+      text-align: left;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    form button {
+      background-color: orange;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: darkorange;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>santhosh Portfolio</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <img 
+ 
+  src="https://i.supaimg.com/b5e4a018-1930-4850-b7f0-7c6520e3196d.png" 
+     alt="Profile Icon" 
+     width="25" 
+     style="border-radius:50%; border:2px solid black;">
+    <h2>About Me</h2>
+    <p>Hi, I'm santhosh, a BCA student at Government Arts College, Chidambaram. I'm passionate about technology and innovation, and I'm excited to build a career in the field.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <ul>
+        <li>Programming Languages: C, Java, Python</li>
+        <li>Web Development: HTML, CSS, JavaScript</li>
+        <li>Database Management: MySQL</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="education">
+      <ul>
+        <li>Bachelor of Computer Applications (BCA), Government Arts College, Chidambaram</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact">
+      <form onsubmit="return sendMessage()">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 santhosh | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    function sendMessage() {
+      let name = document.getElementById("name").value;
+      let email = document.getElementById("email").value;
+      let message = document.getElementById("message").value;
+
+      if(name && email && message){
+        alert("Thank you " + name + "! Your message has been sent.");
+      } else {
+        alert("Please fill out all fields.");
+      }
+      return false; // Prevent actual form submission
+    }
+  </script>
+
+</body>
+</html>
